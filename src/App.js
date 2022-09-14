@@ -1,33 +1,26 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 
 function App() {
-    const [counter, setValue] = useState(0);
-    const [keyword, setKeyword] = useState("");
-    const onClick = () => setValue((prev) => prev + 1);
-    const onChange = (event) => setKeyword(event.target.value);
-    useEffect(() => {
-        console.log("I run ony once.");
-    }, []);
-    useEffect(() => {
-        console.log("I run when 'keyword' changes.");
-    }, [keyword]);
-    useEffect(() => {
-        console.log("I run when 'counter' changes.");
-    }, [counter]);
-    useEffect(() => {
-        console.log("I run when 'keyword&counter' changes.");
-    }, [keyword, counter]);
+    const [toDo, setToDo] = useState("");
+    const onChange = (event) => setToDo(event.target.value);
+    const onSubmit = (event) => {
+        event.preventDefault();
+        console.log(toDo);
+    }
+    console.log(toDo);
     return (
-    <div>
-        <input
-            value={keyword}
-            onChange={onChange} t
-            ype="text"
-            placeholder="Search here..."/>
-        <h1>{counter}</h1>
-        <button onClick={onClick}>click me</button>
-    </div>
-  );
+        <div>
+            <form onSubmit={onSubmit}>
+                <input
+                    onChange={onChange}
+                    value={toDo}
+                    type="text"
+                    placeholder="Write your to do..."
+                />
+                <button>Add To Do</button>
+            </form>
+        </div>
+    );
 }
 
 export default App;
