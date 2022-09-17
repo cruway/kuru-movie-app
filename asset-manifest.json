@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/kuru-movie-app/static/css/main.1c4c5b4a.css",
-    "main.js": "/kuru-movie-app/static/js/main.a793dd23.js",
+    "main.js": "/kuru-movie-app/static/js/main.afe4317e.js",
     "index.html": "/kuru-movie-app/index.html",
     "main.1c4c5b4a.css.map": "/kuru-movie-app/static/css/main.1c4c5b4a.css.map",
-    "main.a793dd23.js.map": "/kuru-movie-app/static/js/main.a793dd23.js.map"
+    "main.afe4317e.js.map": "/kuru-movie-app/static/js/main.afe4317e.js.map"
   },
   "entrypoints": [
     "static/css/main.1c4c5b4a.css",
-    "static/js/main.a793dd23.js"
+    "static/js/main.afe4317e.js"
   ]
 }
